@@ -1,0 +1,16 @@
+package = 99
+quantity = int(input("how many would you like to purchase?\n"))
+discount = 0
+tax = .08625
+if quantity >= 10 and quantity <=19:
+  discount = .1
+elif quantity >=20 and quantity <= 49:
+  discount = .2
+elif quantity >=50 and quantity <=99:
+  discount = .3
+elif quantity >= 100:
+  discount = .4
+ 
+total_amount = package*quantity*(1+tax)*(1-discount)
+print ("this is your discount", discount*100,"%")
+print ("the total amount is", total_amount)
